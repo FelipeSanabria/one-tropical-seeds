@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="soon">
-      <img alt="Vue logo" class="logo" src="./assets/logo.svg">
+      <img alt="Logo" class="logo" src="./assets/logo.svg">
       <HelloWorld />
     </div>
   </div>
