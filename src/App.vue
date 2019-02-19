@@ -10,13 +10,22 @@
         <div class="right">
           <ul>
             <li>
-              <a href="#inicio" v-smooth-scroll="{duration: 1000, offset: -25}">Inicio</a>
+              <a href="#inicio" v-smooth-scroll="{duration: 1000, offset: -25}">{{$t('headerInicio')}}</a>
             </li>
             <li>
-              <a href="#servicios" v-smooth-scroll="{duration: 1000, offset: -25}">Servicios</a>
+              <a href="#servicios" v-smooth-scroll="{duration: 1000, offset: -25}">{{$t('headerServicios')}}</a>
             </li>
             <li>
-              <a href="#contacto" v-smooth-scroll="{duration: 1000, offset: -25}">Contacto</a>
+              <a href="#contacto" v-smooth-scroll="{duration: 1000, offset: -25}">{{$t('headerContacto')}}</a>
+            </li>
+            <li>
+              <div class="vertical-line"></div>
+            </li>
+            <li>
+              <a href="#" @click="$i18n.locale = 'es'">ES</a>
+            </li>
+            <li>
+              <a href="#" @click="$i18n.locale = 'en'">EN</a>
             </li>
           </ul>
         </div>
@@ -26,9 +35,9 @@
         <div class="inicio-txt">
           <img class="logo" alt="Logo" src="./assets/logo.svg">
           <img class="logo tablet" alt="Logo" src="./assets/logo-full.svg">
-          <p>En One Tropical Seeds S.A.S, tenemos como objetivo principal la realización de consultorías y acompañamiento a pequeños, medianos y grandes productores, compañías, y proyectos en su etapa inicial, en la consecución de licencias para el cultivo de Cannabis, la transformación y legalización de sus productos derivados en Colombia. Además, realizamos asesorías en cultivos de plantas aromáticas, manejo, recomendaciones y obtención de subproductos con fines medicinales y terapéuticos.</p>
-          <p>Direccionamos proyectos de producción y exportación de frutas desde Colombia y hacia el exterior de manera personalizada con nuestro equipo de profesionales calificados para tal fin.</p>
-          <p class="cursiva">Hacemos de la naturaleza un estilo de vida</p>
+          <p>{{$t('inicioTxt1')}}</p>
+          <p>{{$t('inicioTxt2')}}</p>
+          <p class="cursiva">{{$t('inicioCursiva')}}</p>
         </div>
         <div class="inicio-img">
           <img class="" alt="One Tropical Seeds" src="./assets/foto-home-1.jpg">
@@ -37,26 +46,26 @@
 
       <section class="servicios" id="servicios">
         <img class="logo" alt="Logo" src="./assets/logo.svg">
-        <h2 class="titulo">Nuestros Servicios</h2>
-        <p>Asesoría en producción, cultivo, documentación para licencias y consultorías en plantas medicinales y Cannabis.</p>
+        <h2 class="titulo">{{$t('serviciosTitulo')}}</h2>
+        <p>{{$t('serviciosSubtitulo')}}</p>
         <div class="servicios-grid">
           <div class="servicios-item">
-            <span class="cursiva">Produccion</span>
+            <span class="cursiva">{{$t('serviciosProduccion')}}</span>
             <img class="logo" alt="Producción" src="./assets/produccion.svg">
           </div>
 
           <div class="servicios-item">
-            <span class="cursiva">Licencias</span>
+            <span class="cursiva">{{$t('serviciosLicencias')}}</span>
             <img class="logo" alt="Licencias" src="./assets/licencias.svg">
           </div>
 
           <div class="servicios-item">
-            <span class="cursiva">Cultivo</span>
+            <span class="cursiva">{{$t('serviciosCultivo')}}</span>
             <img class="logo" alt="Cultivo" src="./assets/cultivo.svg">
           </div>
 
           <div class="servicios-item">
-            <span class="cursiva">Consultoria</span>
+            <span class="cursiva">{{$t('serviciosConsultoria')}}</span>
             <img class="logo" alt="Consultoría" src="./assets/consultorias.svg">
           </div>
         </div>
@@ -64,23 +73,23 @@
 
       <section class="contacto" id="contacto">
         <img class="logo" alt="Logo" src="./assets/logo.svg">
-        <h2 class="titulo">La verdadera esencia de la naturaleza</h2>
+        <h2 class="titulo">{{$t('contactoTitulo')}}</h2>
         <div class="contacto-cont">
           <div class="contacto-form">
             <form class="contacto-form-inner" id="contact-form" action="https://formspree.io/dianasnomali@gmail.com" method="POST">
-              <h3 class="subtitulo">Contáctenos</h3>
-              <input type="text" class="contacto-input" name="Nombre" placeholder="Nombres">
-              <input type="number" class="contacto-input" name="Celular" placeholder="Celular">
-              <input type="email" class="contacto-input" name="Correo" placeholder="Correo">
-              <textarea class="contacto-textarea" name="Mensaje" placeholder="Mensaje" cols="30" rows="10"></textarea>
-              <button type="submit" class="btn-form">Enviar</button>
+              <h3 class="subtitulo">{{$t('contactoSubtitulo')}}</h3>
+              <input type="text" class="contacto-input" name="Nombre" :placeholder="$t('contactoFormNombre')">
+              <input type="number" class="contacto-input" name="Celular" :placeholder="$t('contactoFormCel')">
+              <input type="email" class="contacto-input" name="Correo" :placeholder="$t('contactoFormEmail')">
+              <textarea class="contacto-textarea" name="mensaje" :placeholder="$t('contactoFormMsg')" cols="30" rows="10"></textarea>
+              <button type="submit" class="btn-form">{{$t('contactoFormBtn')}}</button>
             </form>
           </div>
 
           <div class="contacto-txt">
             <img class="logo" alt="Logo" src="./assets/logo.svg">
             <div>
-              <p>Celulares de contacto:</p>
+              <p>{{$t('contactoTxt')}}</p>
               <p>(+57) 1 3134717940<br>(+57) 1 3173668903</p>
               <p>Colombia</p>
             </div>
@@ -94,12 +103,79 @@
 <script>
 import Vue from 'vue'
 import vueSmoothScroll from 'vue-smooth-scroll'
+import VueAnalytics from 'vue-analytics'
+import VueI18n from 'vue-i18n'
 
 Vue.use(vueSmoothScroll)
 
+Vue.use(VueAnalytics, {
+  id: 'UA-134258083-1'
+})
+
+Vue.use(VueI18n)
+
+export const i18n = new VueI18n({
+  locale: 'es',
+  fallbackLocale: 'es',
+  messages: {
+    es: {
+      headerInicio: 'Inicio',
+      headerServicios: 'Servicios',
+      headerContacto: 'Contacto',
+      inicioTxt1: 'En One Tropical Seeds S.A.S, tenemos como objetivo principal la realización de consultorías y acompañamiento a pequeños, medianos y grandes productores, compañías, y proyectos en su etapa inicial, en la consecución de licencias para el cultivo de Cannabis, la transformación y legalización de sus productos derivados en Colombia. Además, realizamos asesorías en cultivos de plantas aromáticas, manejo, recomendaciones y obtención de subproductos con fines medicinales y terapéuticos.',
+      inicioTxt2: 'Direccionamos proyectos de producción y exportación de frutas desde Colombia y hacia el exterior de manera personalizada con nuestro equipo de profesionales calificados para tal fin.',
+      inicioCursiva: 'Hacemos de la naturaleza un estilo de vida',
+      serviciosTitulo: 'Nuestros Servicios',
+      serviciosSubtitulo: 'Asesoría en producción, cultivo, documentación para licencias y consultorías en plantas medicinales y Cannabis.',
+      serviciosProduccion: 'Produccion',
+      serviciosLicencias: 'Licencias',
+      serviciosCultivo: 'Cultivo',
+      serviciosConsultoria: 'Consultoria',
+      contactoTitulo: 'La verdadera esencia de la naturaleza',
+      contactoSubtitulo: 'Contáctenos',
+      contactoFormNombre: 'Nombres',
+      contactoFormCel: 'Celular',
+      contactoFormEmail: 'Correo',
+      contactoFormMsg: 'Mensaje',
+      contactoFormBtn: 'Enviar',
+      contactoTxt: 'Celulares de contacto:'
+    },
+    en: {
+      headerInicio: 'Home',
+      headerServicios: 'Services',
+      headerContacto: 'Contact Us',
+      inicioTxt1: 'At One Tropical Seeds S.A.S, our main objective is to carry out consultancies and support to small, medium and large producers, companies and projects in their initial stage, in obtaining licenses for the cultivation of Cannabis and the transformation and legalization of their derivates in Colombia. In adittion, we provide advice on aromatic plant crops, management, recommendations and byproduct obtaining for medicinal and therapeutic purposes.',
+      inicioTxt2: 'We manage fruit production and export projects from Colombia and abroad in a personalized way with our team of qualified professionals.',
+      inicioCursiva: 'We make nature a lifestyle',
+      serviciosTitulo: 'Our Services',
+      serviciosSubtitulo: 'Assistance on production, cultivation and documentation for licenses and consultancies in medicianl plants and Cannabis.',
+      serviciosProduccion: 'Production',
+      serviciosLicencias: 'Licenses',
+      serviciosCultivo: 'Crop',
+      serviciosConsultoria: 'Consultancies',
+      contactoTitulo: 'The true essence of nature',
+      contactoSubtitulo: 'Contact us',
+      contactoFormNombre: 'Name',
+      contactoFormCel: 'Mobile',
+      contactoFormEmail: 'Email',
+      contactoFormMsg: 'Message',
+      contactoFormBtn: 'Send',
+      contactoTxt: 'Contact Phones:'
+    }
+  }
+})
+
 export default {
-  name: 'app'
+  name: 'app',
+  i18n,
+  methods: {
+    track () {
+      this.$ga.page('/')
+    }
+  }
 }
+
+i18n.locale = 'es'
 </script>
 
 <style lang="scss">
@@ -206,6 +282,11 @@ export default {
       @media screen and (max-width: $break-mobile) {
         width: 100%;
       }
+    }
+    .vertical-line {
+      background-color: rgba($color: $color-text, $alpha: 0.5);
+      height: 20px;
+      width: 1px;
     }
   }
   .inicio {
