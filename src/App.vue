@@ -33,6 +33,9 @@
 
       <section class="inicio" id="inicio">
         <div class="inicio-txt">
+          <p class="negrita">{{$t('inicioRes1')}}</p>
+          <p class="negrita">{{$t('inicioRes2')}}</p>
+          <p class="negrita">{{$t('inicioRes3')}}</p>
           <img class="logo" alt="Logo" src="./assets/logo.svg">
           <img class="logo tablet" alt="Logo" src="./assets/logo-full.svg">
           <p>{{$t('inicioTxt1')}}</p>
@@ -122,6 +125,9 @@ export const i18n = new VueI18n({
       headerInicio: 'Inicio',
       headerServicios: 'Servicios',
       headerContacto: 'Contacto',
+      inicioRes1: 'Contamos con las resoluciones:',
+      inicioRes2: 'Resolución No.00005059 - Registro como Unidad de Evaluación Agronómica de cannabis psicoactivo y no psicoactivo.',
+      inicioRes3: 'Resolución No.00005060 - Registro como Productor de Semilla Seleccionada (sexual y asexual) de cannabis psicoactivo y no psicoactivo.',
       inicioTxt1: 'En One Tropical Seeds S.A.S, tenemos como objetivo principal la realización de consultorías y acompañamiento a pequeños, medianos y grandes productores, compañías, y proyectos en su etapa inicial, en la consecución de licencias para el cultivo de Cannabis, la transformación y legalización de sus productos derivados en Colombia. Además, realizamos asesorías en cultivos de plantas aromáticas, manejo, recomendaciones y obtención de subproductos con fines medicinales y terapéuticos.',
       inicioTxt2: 'Direccionamos proyectos de producción y exportación de frutas desde Colombia y hacia el exterior de manera personalizada con nuestro equipo de profesionales calificados para tal fin.',
       inicioCursiva: 'Hacemos de la naturaleza un estilo de vida',
@@ -144,6 +150,9 @@ export const i18n = new VueI18n({
       headerInicio: 'Home',
       headerServicios: 'Services',
       headerContacto: 'Contact Us',
+      inicioRes1: 'We have the following resolutions:',
+      inicioRes2: 'Resolution # 00005059 - Registration as an Agronomic Evaluation Unit of psychoactive and non-psychoactive cannabis.',
+      inicioRes3: 'Resolution # 00005060 - Registration as Selected Seed Producer (sexual and asexual) of psychoactive and non-psychoactive cannabis.',
       inicioTxt1: 'At One Tropical Seeds S.A.S, our main objective is to carry out consultancies and support to small, medium and large producers, companies and projects in their initial stage, in obtaining licenses for the cultivation of Cannabis and the transformation and legalization of their derivates in Colombia. In adittion, we provide advice on aromatic plant crops, management, recommendations and byproduct obtaining for medicinal and therapeutic purposes.',
       inicioTxt2: 'We manage fruit production and export projects from Colombia and abroad in a personalized way with our team of qualified professionals.',
       inicioCursiva: 'We make nature a lifestyle',
@@ -224,8 +233,12 @@ i18n.locale = 'es'
   .cursiva {
     font-family: 'Ginette';
   }
+  .negrita {
+    font-weight: 700;
+  }
   .logo {
     width: 2rem;
+    margin: 0.5em 0;
   }
   .titulo {
     font-family: 'Book Antiqua', Times, serif;
