@@ -398,7 +398,7 @@ i18n.locale = 'es'
       padding: 0;
     }
     .contacto-cont {
-      background-image: url('./assets/foto-home-2.jpg');
+      background-image: url('./assets/foto-home-3.jpg');
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
