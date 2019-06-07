@@ -1,4 +1,7 @@
-# one-tropical-seeds
+# One Tropical Seeds
+Landing page creada para un cliente freelance. El proyecto se desarrollo usando Vue.js
+
+![OneTropicalSeeds](https://raw.githubusercontent.com/FelipeSanabria/one-tropical-seeds/master/onetropicalseeds.png)
 
 ## Project setup
 ```
