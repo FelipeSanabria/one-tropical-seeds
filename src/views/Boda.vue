@@ -76,6 +76,9 @@
 </template>
 
 <style lang="scss">
+  //Breakpoints
+  $break-tablet: 768px;
+  $break-mobile: 425px;
   // Colors
   $boda-green: #12544A;
   $boda-text: #333333;
@@ -101,6 +104,11 @@
     align-items: center;
     justify-content: center;
     font-family: 'Didot';
+    @media screen and (max-width: $break-mobile) {
+      background-size: 200%;
+      background-position: top;
+      background-repeat: repeat;
+    }
     .boda-tarjeta-wrapper {
       background: $boda-grad;
       display: flex;
@@ -128,10 +136,26 @@
           margin: 2em 0;
           padding: 4em 3em 8em 3em;
           width: 75%;
+          @media screen and (max-width: $break-tablet) {
+            flex-direction: column;
+            padding: 2em 3em 6em 3em;
+          }
+          @media screen and (max-width: $break-mobile) {
+            padding: 2em 0 6em 0;
+            width: 90%;
+          }
           .boda-titulo-txt {
             font-size: 2.8em;
             font-weight: bold;
             letter-spacing: 2.5rem;
+            @media screen and (max-width: $break-tablet) {
+              margin: 1em 0;
+            }
+            @media screen and (max-width: $break-mobile) {
+              letter-spacing: 1.5rem;
+              text-align: center;
+              width: 100%;
+            }
           }
         }
         .boda-mensaje {
@@ -140,6 +164,9 @@
           justify-content: center;
           flex-direction: column;
           width: 75%;
+          @media screen and (max-width: $break-mobile) {
+            width: 90%;
+          }
           .boda-mensaje-titulo {
             font-size: 2.1em;
             color: $boda-green;
@@ -160,6 +187,9 @@
           margin: 1em 0;
           padding: 0.5rem;
           width: 75%;
+          @media screen and (max-width: $break-mobile) {
+            width: 85%;
+          }
           .boda-lugar-fecha {
             background-color: white;
             display: flex;
@@ -167,6 +197,9 @@
             justify-content: space-between;
             padding: 1em 0;
             width: 100%;
+            @media screen and (max-width: $break-tablet) {
+              flex-direction: column;
+            }
             .boda-lugar-fecha-titulo {
               font-size: 2.1em;
               color: $boda-text;
@@ -183,10 +216,16 @@
             .boda-lugar {
               padding: 0 2em;
               width: 30%;
+              @media screen and (max-width: $break-tablet) {
+                width: 100%;
+              }
             }
             .boda-fecha {
               padding: 0 2em;
               width: 30%;
+              @media screen and (max-width: $break-tablet) {
+                width: 100%;
+              }
             }
           }
         }
@@ -197,6 +236,9 @@
           flex-direction: column;
           margin: 1rem 0;
           width: 75%;
+          @media screen and (max-width: $break-mobile) {
+            width: 90%;
+          }
         }
         .boda-sobres {
           display: flex;
@@ -205,6 +247,9 @@
           flex-direction: column;
           margin: 1rem 0;
           width: 75%;
+          @media screen and (max-width: $break-mobile) {
+            width: 90%;
+          }
         }
         .boda-recomendaciones {
           display: flex;
@@ -213,6 +258,9 @@
           flex-direction: column;
           margin: 1rem 0;
           width: 75%;
+          @media screen and (max-width: $break-mobile) {
+            width: 90%;
+          }
         }
         .boda-confirmacion {
           display: flex;
@@ -221,6 +269,9 @@
           flex-direction: column;
           margin: 1rem 0;
           width: 75%;
+          @media screen and (max-width: $break-mobile) {
+            width: 90%;
+          }
         }
         .boda-form {
           display: flex;
@@ -229,6 +280,9 @@
           flex-direction: column;
           margin: 2rem 0;
           width: 75%;
+          @media screen and (max-width: $break-mobile) {
+            width: 90%;
+          }
           .boda-form-titulo {
             color: $boda-text;
             font-size: 1.1em;
@@ -247,6 +301,9 @@
             justify-content: center;
             flex-direction: column;
             width: 50%;
+            @media screen and (max-width: $break-tablet) {
+              width: 100%;
+            }
             .boda-form-input {
               border: solid 1px $boda-green;
               color: $boda-text;
@@ -284,6 +341,9 @@
           font-style: italic;
           letter-spacing: 0.25rem;
           text-decoration: none;
+          @media screen and (max-width: $break-mobile) {
+            width: 100%;
+          }
           .titulo-verde {
             font-style: normal;
             font-weight: bold;
@@ -300,6 +360,9 @@
             margin: 0 1em;
             height: 4px;
             width: 100px;
+            @media screen and (max-width: $break-mobile) {
+              width: 70px;
+            }
           }
         }
         .boda-img {
