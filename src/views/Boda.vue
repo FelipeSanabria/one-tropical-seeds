@@ -53,7 +53,7 @@
         <div class="boda-confirmacion">
           <p class="boda-titulo-2">Confirmación antes del 30 de agosto de 2019</p>
           <p class="boda-titulo-2">
-            <countdown :time="43 * 24 * 60 * 60 * 1000">
+            <countdown :time="time">
               <template slot-scope="props">Quedan {{ props.days }} días, {{ props.hours }} horas, {{ props.minutes }} minutos, {{ props.seconds }} segundos</template>
             </countdown>
           </p>
@@ -64,9 +64,9 @@
           <p class="boda-form-txt">*Favor registrarse por persona para conocer los cupos</p>
           <form class="boda-form-inner" id="boda-form" action="https://formspree.io/dianasnomali@gmail.com"
             method="POST">
-            <input type="text" class="" hidden="true" name="Asunto" text="Confirmación Asistente a la Boda">
+            <input type="text" class="" hidden="true" name="Asunto" value="Confirmación Asistente a la Boda">
             <input type="text" class="boda-form-input" name="Nombre" placeholder="Nombre y Apellido">
-            <input type="number" class="boda-form-input" name="Cedula" placeholder="Cedula">
+            <input type="number" class="boda-form-input" name="Cedula" placeholder="Cédula">
             <button type="submit" class="boda-form-btn">ENVIAR</button>
           </form>
         </div>
@@ -152,6 +152,7 @@
               margin: 1em 0;
             }
             @media screen and (max-width: $break-mobile) {
+              font-size: 2em;
               letter-spacing: 1.5rem;
               text-align: center;
               width: 100%;
@@ -380,6 +381,14 @@ import VueCountdown from '@chenfengyuan/vue-countdown'
 Vue.component(VueCountdown.name, VueCountdown)
 
 export default {
-  name: 'boda'
+  name: 'boda',
+
+  data: function () {
+    var now = new Date()
+    var date = new Date(now.getFullYear() + 0, 7, 31)
+    return {
+      time: date - now
+    }
+  }
 }
 </script>
