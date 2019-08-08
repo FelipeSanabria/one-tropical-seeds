@@ -33,7 +33,7 @@
         <div class="boda-traje">
           <p class="boda-titulo-2">Traje</p>
           <p>
-            <span class="boda-txt-verde"><span class="titulo-verde">Mujeres:</span> Formal, no color blanco</span><br />
+            <span class="boda-txt-verde"><span class="titulo-verde">Mujeres:</span> Formal, no usar color blanco</span><br />
             <span class="boda-txt-verde"><span class="titulo-verde">Hombres:</span> Formal, colores oscuros</span>
           </p>
         </div>
@@ -44,9 +44,9 @@
         </div>
 
         <div class="boda-recomendaciones">
-          <a href="" class="boda-txt-verde">
-            <span class="boda-lineas">Conoce aquí</span>
-            <span>recomendaciones para alojamiento y viaje</span>
+          <a href="./indicaciones.pdf" target="_blank" class="boda-txt-verde link">
+            <span class="boda-lineas">Haz clic aquí</span>
+            <span>para conocer recomendaciones de alojamiento y viaje</span>
           </a>
         </div>
 
@@ -341,9 +341,11 @@
           font-size: 1.4em;
           font-style: italic;
           letter-spacing: 0.25rem;
-          text-decoration: none;
           @media screen and (max-width: $break-mobile) {
             width: 100%;
+          }
+          &.link span {
+            padding: 5px 0;
           }
           .titulo-verde {
             font-style: normal;
