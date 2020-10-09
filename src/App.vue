@@ -10,10 +10,13 @@
         <div class="right">
           <ul>
             <li>
-              <a href="#inicio" v-smooth-scroll="{duration: 1000, offset: -25}">{{$t('headerInicio')}}</a>
+              <a href="#nosotros" v-smooth-scroll="{duration: 1000, offset: -25}">{{$t('headerInicio')}}</a>
             </li>
             <li>
-              <a href="#servicios" v-smooth-scroll="{duration: 1000, offset: -25}">{{$t('headerServicios')}}</a>
+              <a href="#fotos" v-smooth-scroll="{duration: 1000, offset: -25}">{{$t('headerFotos')}}</a>
+            </li>
+            <li>
+              <a href="#aliados" v-smooth-scroll="{duration: 1000, offset: -25}">{{$t('headerAliados')}}</a>
             </li>
             <li>
               <a href="#contacto" v-smooth-scroll="{duration: 1000, offset: -25}">{{$t('headerContacto')}}</a>
@@ -33,44 +36,49 @@
 
       <section class="inicio" id="inicio">
         <div class="inicio-txt">
-          <img class="logo tablet" alt="Logo" src="./assets/logo-full.svg">
-          <p>{{$t('inicioRes')}}</p>
-          <p><span class="negrita">{{$t('inicioRes1Titulo')}}</span><br/>{{$t('inicioRes1Txt')}}</p>
-          <p><span class="negrita">{{$t('inicioRes2Titulo')}}</span><br/>{{$t('inicioRes2Txt')}}</p>
           <img class="logo" alt="Logo" src="./assets/logo.svg">
-          <p class="tablet">&nbsp;</p>
-          <p>{{$t('inicioTxt1')}}</p>
-          <p>{{$t('inicioTxt2')}}</p>
+          <img class="logo tablet" alt="Logo" src="./assets/logo-full.svg">
+          <p>{{$t('inicioTexto1')}}</p>
+          <p>{{$t('inicioTexto2')}}</p>
+          <p>{{$t('inicioTexto3')}}</p>
+          <p><span class="negrita">{{$t('inicioTitulo1')}}</span><br/>{{$t('inicioTexto4')}}</p>
+          <p>{{$t('inicioTexto5')}}</p>
+          <p><span class="negrita">{{$t('inicioTitulo2')}}</span><br/>{{$t('inicioTexto6')}}</p>
+          <p>{{$t('inicioTexto7')}}</p>
           <p class="cursiva">{{$t('inicioCursiva')}}</p>
         </div>
         <div class="inicio-img">
-          <img class="" alt="One Tropical Seeds" src="./assets/foto-home-1.jpg">
+          <img class="" alt="One Tropical Seeds" src="./assets/ots-nosotros.jpg">
         </div>
       </section>
 
-      <section class="servicios" id="servicios">
+      <section class="fotos" id="fotos">
         <img class="logo" alt="Logo" src="./assets/logo.svg">
-        <h2 class="titulo">{{$t('serviciosTitulo')}}</h2>
-        <p>{{$t('serviciosSubtitulo')}}</p>
-        <div class="servicios-grid">
-          <div class="servicios-item">
-            <span class="cursiva">{{$t('serviciosProduccion')}}</span>
-            <img class="logo" alt="Producción" src="./assets/produccion.svg">
+        <div class="fotos-container">
+          <img class="fotos-item" src="./assets/01.jpg" alt="One Tropical Seeds" />
+          <img class="fotos-item" src="./assets/02.jpg" alt="One Tropical Seeds" />
+          <img class="fotos-item" src="./assets/03.jpg" alt="One Tropical Seeds" />
+          <img class="fotos-item" src="./assets/04.jpg" alt="One Tropical Seeds" />
+          <img class="fotos-item" src="./assets/05.jpg" alt="One Tropical Seeds" />
+          <img class="fotos-item" src="./assets/06.jpg" alt="One Tropical Seeds" />
+          <img class="fotos-item" src="./assets/07.jpg" alt="One Tropical Seeds" />
+          <img class="fotos-item" src="./assets/08.jpg" alt="One Tropical Seeds" />
+          <img class="fotos-item" src="./assets/09.jpg" alt="One Tropical Seeds" />
+          <img class="fotos-item" src="./assets/010.jpg" alt="One Tropical Seeds" />
+        </div>
+      </section>
+
+      <section class="aliados" id="aliados">
+        <img class="logo" alt="Logo" src="./assets/logo.svg">
+        <div class="aliados-container">
+          <div class="aliados-item">
+            <h2 class="titulo">{{$t('aliadosTexto1')}}</h2>
+            <img class="aliados-img" src="./assets/logo-laboratorio.jpg" alt="Kelab Cromatografía" />
           </div>
 
-          <div class="servicios-item">
-            <span class="cursiva">{{$t('serviciosLicencias')}}</span>
-            <img class="logo" alt="Licencias" src="./assets/licencias.svg">
-          </div>
-
-          <div class="servicios-item">
-            <span class="cursiva">{{$t('serviciosCultivo')}}</span>
-            <img class="logo" alt="Cultivo" src="./assets/cultivo.svg">
-          </div>
-
-          <div class="servicios-item">
-            <span class="cursiva">{{$t('serviciosConsultoria')}}</span>
-            <img class="logo" alt="Consultoría" src="./assets/consultorias.svg">
+          <div class="aliados-item">
+            <h2 class="titulo">{{$t('aliadosTexto2')}}</h2>
+            <img class="aliados-img" src="./assets/logo-distribuidor.jpg" alt="Saenz Fety" />
           </div>
         </div>
       </section>
@@ -95,7 +103,19 @@
             <div>
               <p>{{$t('contactoTxt')}}</p>
               <p>(+57) 1 3134717940<br>(+57) 1 3173668903</p>
-              <p>Colombia</p>
+              <p>Paipa, Boyacá<br>Colombia</p>
+            </div>
+
+            <div>
+              <p>{{$t('contactoTxt2')}}<br>@onetropicalseeds</p>
+              <div class="social-icons">
+                <a href="https://www.facebook.com/onetropicalseeds/">
+                  <img class="logo" alt="Logo" src="./assets/facebook.svg">
+                </a>
+                <a href="https://www.instagram.com/onetropicalseeds/">
+                  <img class="logo" alt="Logo" src="./assets/instagram.svg">
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -123,58 +143,58 @@ export const i18n = new VueI18n({
   fallbackLocale: 'es',
   messages: {
     es: {
-      headerInicio: 'Inicio',
-      headerServicios: 'Servicios',
+      headerInicio: 'Nosotros',
+      headerFotos: 'Fotos',
+      headerAliados: 'Aliados',
       headerContacto: 'Contacto',
-      inicioRes: 'Contamos con las resoluciones:',
-      inicioRes1Titulo: 'Resolución No.00005059',
-      inicioRes1Txt: 'Registro como Unidad de Evaluación Agronómica de cannabis psicoactivo y no psicoactivo.',
-      inicioRes2Titulo: 'Resolución No.00005060',
-      inicioRes2Txt: 'Registro como Productor de Semilla Seleccionada (sexual y asexual) de cannabis psicoactivo y no psicoactivo.',
-      inicioTxt1: 'En One Tropical Seeds S.A.S, tenemos como objetivo principal la realización de consultorías y acompañamiento a pequeños, medianos y grandes productores, compañías, y proyectos en su etapa inicial, en la consecución de licencias para el cultivo de Cannabis, la transformación y legalización de sus productos derivados en Colombia. Además, realizamos asesorías en cultivos de plantas aromáticas, manejo, recomendaciones y obtención de subproductos con fines medicinales y terapéuticos.',
-      inicioTxt2: 'Direccionamos proyectos de producción y exportación de frutas desde Colombia y hacia el exterior de manera personalizada con nuestro equipo de profesionales calificados para tal fin.',
-      inicioCursiva: 'Hacemos de la naturaleza un estilo de vida',
-      serviciosTitulo: 'Nuestros Servicios',
-      serviciosSubtitulo: 'Asesoría en producción, cultivo, documentación para licencias y consultorías en plantas medicinales y Cannabis.',
-      serviciosProduccion: 'Produccion',
-      serviciosLicencias: 'Licencias',
-      serviciosCultivo: 'Cultivo',
-      serviciosConsultoria: 'Consultoria',
-      contactoTitulo: 'La verdadera esencia de la naturaleza',
+      inicioTitulo1: 'ICA',
+      inicioTitulo2: 'Ministerio de Justicia',
+      inicioTexto1: 'One Tropical Seeds S.A.S',
+      inicioTexto2: 'Empresa licenciada Colombiana, ubicada en Paipa Boyacá. Cultivadores de cannabis medicinal no psicoactivo y cultivadores de fruta Nopal.',
+      inicioTexto3: 'Actualmente contamos con las licencias y registros:',
+      inicioTexto4: 'Registro como Unidad de Evaluación Agronómica de cannabis psicoactivo y no psicoactivo.',
+      inicioTexto5: 'Registro como Productor de Semilla Seleccionada (sexual y asexual) de cannabis psicoactivo y no psicoactivo.',
+      inicioTexto6: 'Licencia de cultivo no psicoactivo',
+      inicioTexto7: 'Apoyamos empresas en su direccionamiento en proyectos de cultivo y producción de cannabis y otros cultivos de manera personalizada.',
+      inicioCursiva: 'Empresa licenciada legalmente, no se vende ni se distribuye para consumo. Apto para mayores de 18 años.',
+      aliadosTexto1: 'Laboratorio Aliado',
+      aliadosTexto2: 'Distribuidor Oficial',
+      contactoTitulo: 'Contáctenos y hablaremos de sus intereses',
       contactoSubtitulo: 'Contáctenos',
       contactoFormNombre: 'Nombres',
       contactoFormCel: 'Celular',
       contactoFormEmail: 'Correo',
       contactoFormMsg: 'Mensaje',
       contactoFormBtn: 'Enviar',
-      contactoTxt: 'Celulares de contacto:'
+      contactoTxt: 'Celulares de contacto:',
+      contactoTxt2: 'Encuentrenos:'
     },
     en: {
-      headerInicio: 'Home',
-      headerServicios: 'Services',
+      headerInicio: 'About Us',
+      headerFotos: 'Pictures',
+      headerAliados: 'Allies',
       headerContacto: 'Contact Us',
-      inicioRes: 'We have the following resolutions:',
-      inicioRes1Titulo: 'Resolution # 00005059',
-      inicioRes1Txt: 'Registration as an Agronomic Evaluation Unit of psychoactive and non-psychoactive cannabis.',
-      inicioRes2Titulo: 'Resolution # 00005060',
-      inicioRes2Txt: 'Registration as Selected Seed Producer (sexual and asexual) of psychoactive and non-psychoactive cannabis.',
-      inicioTxt1: 'At One Tropical Seeds S.A.S, our main objective is to carry out consultancies and support to small, medium and large producers, companies and projects in their initial stage, in obtaining licenses for the cultivation of Cannabis and the transformation and legalization of their derivates in Colombia. In adittion, we provide advice on aromatic plant crops, management, recommendations and byproduct obtaining for medicinal and therapeutic purposes.',
-      inicioTxt2: 'We manage fruit production and export projects from Colombia and abroad in a personalized way with our team of qualified professionals.',
-      inicioCursiva: 'We make nature a lifestyle',
-      serviciosTitulo: 'Our Services',
-      serviciosSubtitulo: 'Assistance on production, cultivation and documentation for licenses and consultancies in medicianl plants and Cannabis.',
-      serviciosProduccion: 'Production',
-      serviciosLicencias: 'Licenses',
-      serviciosCultivo: 'Crop',
-      serviciosConsultoria: 'Consultancies',
-      contactoTitulo: 'The true essence of nature',
+      inicioTitulo1: 'ICA',
+      inicioTitulo2: 'Ministry of Justice',
+      inicioTexto1: 'One Tropical Seeds S.A.S',
+      inicioTexto2: 'Colombian licensed company, located in Paipa Boyacá. Non-psychoactive medical cannabis growers and Nopal fruit growers.',
+      inicioTexto3: 'We currently have the following licenses and registrations:',
+      inicioTexto4: 'Register as an Agronomic Evaluation Unit for psychoactive and non-psychoactive cannabis.',
+      inicioTexto5: 'Register as Producer of Selected Seed (sexual and asexual) of psychoactive and non-psychoactive cannabis.',
+      inicioTexto6: 'Non-psychoactive cultivation license',
+      inicioTexto7: 'We support companies in their direction in projects of cultivation and production of cannabis and other crops in a personalized way.',
+      inicioCursiva: 'Legally licensed company, we do not sell or distribute for consumption. Suitable for people over 18 years old.',
+      aliadosTexto1: 'Allied Laboratory',
+      aliadosTexto2: 'Official Distributor',
+      contactoTitulo: 'Contact us and we´ll talk about your interests',
       contactoSubtitulo: 'Contact us',
       contactoFormNombre: 'Name',
       contactoFormCel: 'Mobile',
       contactoFormEmail: 'Email',
       contactoFormMsg: 'Message',
       contactoFormBtn: 'Send',
-      contactoTxt: 'Contact Phones:'
+      contactoTxt: 'Contact Phones:',
+      contactoTxt2: 'Find Us:'
     }
   }
 })
@@ -236,7 +256,8 @@ i18n.locale = 'es'
     }
   }
   .cursiva {
-    font-family: 'Ginette';
+    font-size: 0.6em;
+    font-style: italic;
   }
   .negrita {
     font-weight: 700;
@@ -275,7 +296,7 @@ i18n.locale = 'es'
       }
     }
     .right {
-      width: 30%;
+      width: auto;
       ul {
         display: flex;
         align-items: center;
@@ -285,6 +306,7 @@ i18n.locale = 'es'
         padding: 0;
         width: 100%;
         li {
+          margin-right: 3em;
           a {
             color: $color-text;
             text-decoration: none;
@@ -313,11 +335,8 @@ i18n.locale = 'es'
     justify-content: space-evenly;
     padding: 2em;
     .inicio-txt {
-      margin: 0 2em;
-      width: 30%;
-      .cursiva {
-        font-size: 1.5em;
-      }
+      margin: 0 4em;
+      width: 50%;
       img {
         @media screen and (max-width: $break-tablet) {
           display: none;
@@ -348,12 +367,45 @@ i18n.locale = 'es'
     }
     .inicio-img {
       margin: 0 2em;
+      width: 50%;
       img {
-        height: 100%;
-        width: auto;
+        height: auto;
+        width: 85%;
       }
       @media screen and (max-width: $break-tablet) {
         display: none;
+      }
+    }
+  }
+  .fotos {
+    padding: 2em;
+    .fotos-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      .fotos-item {
+        margin: 1em 0;
+        height: auto;
+        width: 45%;
+      }
+    }
+  }
+  .aliados {
+    padding: 2em;
+    .aliados-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      .aliados-item {
+        margin: 1em 0;
+        height: auto;
+        width: 45%;
+        img {
+          height: auto;
+          width: 50%;
+        }
       }
     }
   }
@@ -509,6 +561,15 @@ i18n.locale = 'es'
         }
         .logo {
           margin: 2em 0;
+        }
+        .social-icons {
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          .logo {
+            margin: 0;
+            padding: 0;
+          }
         }
       }
     }
