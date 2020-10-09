@@ -109,10 +109,10 @@
             <div>
               <p>{{$t('contactoTxt2')}}<br>@onetropicalseeds</p>
               <div class="social-icons">
-                <a href="https://www.facebook.com/onetropicalseeds/">
+                <a href="https://www.facebook.com/onetropicalseeds/" target="_blank">
                   <img class="logo" alt="Logo" src="./assets/facebook.svg">
                 </a>
-                <a href="https://www.instagram.com/onetropicalseeds/">
+                <a href="https://www.instagram.com/onetropicalseeds/" target="_blank">
                   <img class="logo" alt="Logo" src="./assets/instagram.svg">
                 </a>
               </div>
