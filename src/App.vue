@@ -318,6 +318,11 @@ i18n.locale = 'es'
       }
       @media screen and (max-width: $break-tablet) {
         width: 80%;
+        ul {
+          li {
+            margin: 0;
+          }
+        }
       }
       @media screen and (max-width: $break-mobile) {
         width: 100%;
@@ -388,6 +393,9 @@ i18n.locale = 'es'
         margin: 1em 0;
         height: auto;
         width: 45%;
+        @media screen and (max-width: $break-mobile) {
+          width: 85%;
+        }
       }
     }
   }
@@ -405,6 +413,9 @@ i18n.locale = 'es'
         img {
           height: auto;
           width: 50%;
+        }
+        @media screen and (max-width: $break-mobile) {
+          width: 85%;
         }
       }
     }
