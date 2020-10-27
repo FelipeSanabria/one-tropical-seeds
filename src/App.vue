@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="landing">
+    <!-- <div class="landing">
       <header class="navbar">
         <div class="left">
           <img class="logo-header" alt="Logo Header" src="./assets/logo-full.svg">
@@ -121,6 +121,17 @@
         </div>
       </section>
     </div>
+  </div> -->
+
+  <div class="hello">
+    <h1 class="titulo">En mantenimiento.</h1>
+    <p>Puedes contactarnos en nuestras redes sociales.</p>
+    <div class="redes">
+      <a href="https://wa.me/573173668903" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.facebook.com/onetropicalseeds/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/onetropicalseeds/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
   </div>
 </template>
 
@@ -572,6 +583,22 @@ i18n.locale = 'es'
           }
         }
       }
+    }
+  }
+  .titulo {
+    font-size: 2em;
+    font-family: 'Book Antiqua', Times, serif;
+  }
+  .redes {
+    margin: 2em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+      color: #517c42;
+      font-size: 1.25em;
+      text-decoration: none;
+      margin: 0 1em;
     }
   }
 </style>
