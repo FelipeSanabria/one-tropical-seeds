@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1 class="titulo">En construcción.</h1>
+    <h1 class="titulo">En construcci?n.</h1>
     <p>Puedes contactarnos en nuestras redes sociales.</p>
     <div class="redes">
       <a href="https://wa.me/573173668903" target="_blank"><i class="fab fa-whatsapp"></i></a>

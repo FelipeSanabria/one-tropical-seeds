@@ -109,10 +109,10 @@
             <div>
               <p>{{$t('contactoTxt2')}}<br>@onetropicalseeds</p>
               <div class="social-icons">
-                <a href="https://www.facebook.com/onetropicalseeds/">
+                <a href="https://www.facebook.com/onetropicalseeds/" target="_blank">
                   <img class="logo" alt="Logo" src="./assets/facebook.svg">
                 </a>
-                <a href="https://www.instagram.com/onetropicalseeds/">
+                <a href="https://www.instagram.com/onetropicalseeds/" target="_blank">
                   <img class="logo" alt="Logo" src="./assets/instagram.svg">
                 </a>
               </div>
@@ -329,6 +329,11 @@ i18n.locale = 'es'
       }
       @media screen and (max-width: $break-tablet) {
         width: 80%;
+        ul {
+          li {
+            margin: 0;
+          }
+        }
       }
       @media screen and (max-width: $break-mobile) {
         width: 100%;
@@ -399,6 +404,9 @@ i18n.locale = 'es'
         margin: 1em 0;
         height: auto;
         width: 45%;
+        @media screen and (max-width: $break-mobile) {
+          width: 85%;
+        }
       }
     }
   }
@@ -416,6 +424,9 @@ i18n.locale = 'es'
         img {
           height: auto;
           width: 50%;
+        }
+        @media screen and (max-width: $break-mobile) {
+          width: 85%;
         }
       }
     }
@@ -461,7 +472,7 @@ i18n.locale = 'es'
       padding: 0;
     }
     .contacto-cont {
-      background-image: url('./assets/foto-home-3.jpg');
+      background-image: url('./assets/contacto.jpg');
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
