@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <!-- <div class="landing">
+    <div class="landing">
       <header class="navbar">
         <div class="left">
           <img class="logo-header" alt="Logo Header" src="./assets/logo-full.svg">
@@ -121,9 +121,9 @@
         </div>
       </section>
     </div>
-  </div> -->
+  </div>
 
-  <div class="hello">
+  <!-- <div class="hello">
     <h1 class="titulo">En mantenimiento.</h1>
     <p>Puedes contactarnos en nuestras redes sociales.</p>
     <div class="redes">
@@ -132,7 +132,7 @@
       <a href="https://www.instagram.com/onetropicalseeds/" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
   </div>
-  </div>
+  </div> -->
 </template>
 
 <script>
