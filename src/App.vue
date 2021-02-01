@@ -61,8 +61,8 @@
           <img class="fotos-item" src="./assets/04.jpg" alt="One Tropical Seeds" />
           <img class="fotos-item" src="./assets/05.jpg" alt="One Tropical Seeds" />
           <img class="fotos-item" src="./assets/06.jpg" alt="One Tropical Seeds" />
-          <img class="fotos-item" src="./assets/07.jpg" alt="One Tropical Seeds" />
-          <img class="fotos-item" src="./assets/08.jpg" alt="One Tropical Seeds" />
+          <img class="fotos-item" src="./assets/07n.jpg" alt="One Tropical Seeds" />
+          <img class="fotos-item" src="./assets/08n.jpg" alt="One Tropical Seeds" />
           <img class="fotos-item" src="./assets/09.jpg" alt="One Tropical Seeds" />
           <img class="fotos-item" src="./assets/010.jpg" alt="One Tropical Seeds" />
         </div>
@@ -102,8 +102,8 @@
             <img class="logo" alt="Logo" src="./assets/logo.svg">
             <div>
               <p>{{$t('contactoTxt')}}</p>
-              <p>(+57) 1 3134717940<br>(+57) 1 3173668903</p>
-              <p>Paipa, Boyacá<br>Colombia</p>
+              <p>(+57) 1 3173668903</p>
+              <p>Boyacá, Colombia</p>
             </div>
 
             <div>
